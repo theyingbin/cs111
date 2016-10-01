@@ -1,0 +1,39 @@
+UCLA CS 111 Project 1a
+Ying Bin Wu
+Spring 2016
+
+++++++++++++++
+Files Included
+++++++++++++++
+lab1.c - the C source code for project 1a
+Makefile - a file that makes the executable and tarbell
+README - a text file describing the project
+
++++++++++++
+Limitations
++++++++++++
+I could not get the program to exit immediately after the shell sends an EOF back.
+Instead, my program takes input from the user and once the user hits submits, the
+program exits with error code 1. This is due to the fact when the shell sent the EOF,
+the terminal is still reading input from the user.
+
+++++++++
+Features
+++++++++
+My program takes input charcter at a time in no echo mode and writes back what the user typed.
+With the --shell option, my program creates a new process that takes input from the user and
+forwards it to the shell. The shell then gives my program the output which is then interpreted
+and if no signals occured, is written onto screen. Upon recieving a ^D ^C or EOF, my program behaves
+as according to the spec by sending various signals, restoring terminal modes,  and exiting with
+different error codes.
+
++++++++
+Testing
++++++++
+To test my program, I worked incrementally and tested it as I added new features.
+
+++++++++++
+References
+++++++++++
+My TA Tuan Le demonstrated to me how I can change the modes of the program.
+He also demonstrated how I can change my process to run the shell. 

@@ -1,0 +1,35 @@
+UCLA CS 111 Project 0
+Ying Bin Wu
+Spring 2016
+
+++++
+Task
+++++
+We had to create an executable that takes input from stdin or a file specified by the input option
+and output to stdout or a file specified by the output option
+
++++++++
+Testing
++++++++
+The test cases I used can be found in the Makefile under check
+
+The purpose of the 1st test was to check if it just takes input from stdin and outputs to stdout with no options
+The purpose of the 2nd test was to check if --input works by taking a file to read from instead of stdin
+The purpose of the 3rd test was to check if --output works by outputing to a file instead of stdout
+The purpose of the 4th test was to check if --input and --output work together. It also checks that output will take a file and replace the contents inside of it
+The purpose of the 5th test was to check that --segfault works by checking that the return code is 139
+The purpose of the 6h test was to check that --catch doesn't affect the program when a segfault isn't raised
+The purpose of the 7th test was to check that --segfault and --catch work together by checking that the return code is 3
+The purpose of the 8th test was to check that all the options work together
+The purpose of the 9th test was to check that the return code for output is 2 when there is an error writing to the output file
+The purpose of the last test was to check that the return code for input is 1 when there is an error opening the input file
+
++++++++++++
+Limitations
++++++++++++
+My executable only has defined behavior for cases that were mentioned in the spec. Cases such as having multiple input and multiple output or having the input and output as the same file have undefined behavior
+
+++++++++++
+References
+++++++++++
+The TA Tuan Le showed me how I can parse the options using using the getopt library

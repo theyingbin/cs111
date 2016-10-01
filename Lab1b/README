@@ -1,0 +1,31 @@
+UCLA CS111 Project 1b
+Ying Bin Wu
+104485521
+Spring 2016
+
+++++++++++++++
+Files Included
+++++++++++++++
+server.c - c file the contains the source code for the server program. it also supports the --port=<portno>, --log=<filename>, and --encrypt option
+client.c - c file that contains the source code for the client program. it also supports the --port=<portno> and --encrypt option
+Makefile - file to make client and server. also makes the submission and supports clean
+README - (this file) describes what I did for project 1b and its limitations/features/testing methodology/etc
+my.key - key used for the encryption option for server.c and client.c
+
+++++++++
+Features
+++++++++
+My program takes input characters as the client and sends them over to the server, which processes it in the shell process and sends the result back to the client.
+With the --log option, my program tracks what is sent and received from the server.
+With the --encrypt option, my program encrypts a message before sending it to the server and decrypts it before receiving it
+
++++++++
+Testing
++++++++
+To test my program, I worked incrementally and tested it as I added new features such as adding support for the --log option and the --encrypt option.
+
+++++++++++
+References
+++++++++++
+I used the socket tutorial to learn how to program sockets to get started. I modified the code provided by the socket tutroial in the spec to get started on my server.c. I looked at the examples on tutorialspoint to get started on my client.c.
+I looked at the man page for mcrypt to understand how to encrypt my messages and incorporated that into my program. 
